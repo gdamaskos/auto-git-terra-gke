@@ -18,22 +18,22 @@ resource "random_id" "bucket_prefix" {
 }
 
 resource "google_storage_bucket" "default" {
-  name          = "${random_id.bucket_prefix.hex}-bucket-tfstate"
-  force_destroy = false
+  name                        = "${random_id.bucket_prefix.hex}-bucket-tfstate"
+  force_destroy               = false
   uniform_bucket_level_access = true
-  location      = "EU"
-  storage_class = "STANDARD"
+  location                    = "EU"
+  storage_class               = "STANDARD"
   versioning {
     enabled = true
   }
 }
 
 resource "google_storage_bucket" "gs_sandy_bucket" {
-  name          = "gs-sandy-bucket"
-  force_destroy = false
+  name                        = "gs-sandy-bucket"
+  force_destroy               = false
   uniform_bucket_level_access = true
-  location      = "EU"
-  storage_class = "STANDARD"
+  location                    = "EU"
+  storage_class               = "STANDARD"
   versioning {
     enabled = true
   }

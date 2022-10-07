@@ -1,4 +1,4 @@
-variable "project" { 
+variable "project" {
   default = "dbk-sandbox-giorgos-c57e"
 }
 
