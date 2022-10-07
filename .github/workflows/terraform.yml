@@ -62,7 +62,7 @@ jobs:
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
@@ -72,7 +72,7 @@ jobs:
     - name: Terraform Init
       run: terraform init
       env:
-        GOOGLE_CREDS: ${{ secrets.GOOGLE_CREDS }}
+        GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDS }}
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
